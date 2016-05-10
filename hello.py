@@ -43,9 +43,9 @@ def get_key():
 					is_block[free_key] = 2
 					return "Key %s" %free_key
 			else:
-				return redirect("/a", code=404)			
+				return redirect("/where-ever"), 404, {"Refresh": "1; url=/where-ever"}			
 	else:
-	    return redirect("/a", code=404)
+	    return redirect("/where-ever"), 404, {"Refresh": "1; url=/where-ever"}			
 
 @app.route('/unblock_key/<key>')
 def unblock_key(key):
